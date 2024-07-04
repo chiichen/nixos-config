@@ -57,8 +57,10 @@
 
   # Configure keymap in X11
   services.xserver = {
-    layout = "cn";
-    xkbVariant = "";
+    xkb = {
+      layout = "cn";
+      variant = "";
+    };
     videoDrivers = ["nvidia"];#Config for Nvidia
   };
 
@@ -92,6 +94,7 @@
     egl-wayland
     vscode
     google-chrome
+    clash-verge
   ];
   environment.variables.EDITOR = "vim";
   # List packages installed in system profile. To search, run:
