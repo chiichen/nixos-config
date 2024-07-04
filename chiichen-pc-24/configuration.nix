@@ -40,21 +40,6 @@
   # Set your time zone.
   time.timeZone = "Asia/Shanghai";
 
-  # Select internationalisation properties.
-  i18n.defaultLocale = "zh_CN.UTF-8";
-
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "zh_CN.UTF-8";
-    LC_IDENTIFICATION = "zh_CN.UTF-8";
-    LC_MEASUREMENT = "zh_CN.UTF-8";
-    LC_MONETARY = "zh_CN.UTF-8";
-    LC_NAME = "zh_CN.UTF-8";
-    LC_NUMERIC = "zh_CN.UTF-8";
-    LC_PAPER = "zh_CN.UTF-8";
-    LC_TELEPHONE = "zh_CN.UTF-8";
-    LC_TIME = "zh_CN.UTF-8";
-  };
-
   # Configure keymap in X11
   services.xserver = {
     xkb = {
@@ -95,14 +80,9 @@
     vscode
     google-chrome
     clash-verge
+    clash-meta
   ];
   environment.variables.EDITOR = "vim";
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  # environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
-  # ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
