@@ -12,17 +12,17 @@
 
   # Setting up for Nvidia
   # hardware.nvidia.package = config.boot.kernelPackages.nvidaPackages.stable;
-  hardware.opengl = {
-   enable = true;
-  };
-  hardware.nvidia = {
-    modesetting.enable = true;
-    powerManagement.enable = true;
-    powerManagement.finegrained = false;
-    open = false;
-    nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.stable; 
-  };
+  # hardware.opengl = {
+  #  enable = true;
+  # };
+  # hardware.nvidia = {
+  #   modesetting.enable = true;
+  #   powerManagement.enable = true;
+  #   powerManagement.finegrained = false;
+  #   open = false;
+  #   nvidiaSettings = true;
+  #   package = config.boot.kernelPackages.nvidiaPackages.stable; 
+  # };
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -40,20 +40,11 @@
   # Set your time zone.
   time.timeZone = "Asia/Shanghai";
 
-  # Configure keymap in X11
-  services.xserver = {
-    xkb = {
-      layout = "cn";
-      variant = "";
-    };
-    videoDrivers = ["nvidia"];#Config for Nvidia
-  };
-
-  # Use hyprland
-  programs.hyprland = {
-    enable = true;
-    xwayland.enable = true;
-  };
+   # Use hyprland
+  # programs.hyprland = {
+  #   enable = true;
+  #   xwayland.enable = true;
+  # };
   
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.chiichen = {
@@ -79,8 +70,6 @@
     egl-wayland
     vscode
     google-chrome
-    clash-verge
-    clash-meta
   ];
   environment.variables.EDITOR = "vim";
 
