@@ -6,7 +6,8 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
+      # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
 
@@ -40,27 +41,27 @@
   # Set your time zone.
   time.timeZone = "Asia/Shanghai";
 
-   # Use hyprland
+  # Use hyprland
   # programs.hyprland = {
   #   enable = true;
   #   xwayland.enable = true;
   # };
-  
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.chiichen = {
     isNormalUser = true;
     description = "chiichen";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
+    packages = with pkgs; [ ];
   };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
   # Setting mirror in China
-  nix.settings.substituters = ["https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"];
+  nix.settings.substituters = [ "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store" ];
 
-  nix.settings.experimental-features=["nix-command" "flakes"];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
   environment.systemPackages = with pkgs;[
     git
     vim

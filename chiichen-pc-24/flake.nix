@@ -12,7 +12,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = { self, nixpkgs,home-manager, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
@@ -26,13 +26,13 @@
         ./system/gc.nix
         ./system/dynamic-link.nix
         home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.chiichen = import ./home.nix;
-            home-manager.backupFileExtension = "backup";
-            home-manager.extraSpecialArgs = inputs;
-          }
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.users.chiichen = import ./home.nix;
+          home-manager.backupFileExtension = "backup";
+          home-manager.extraSpecialArgs = inputs;
+        }
       ];
     };
   };
