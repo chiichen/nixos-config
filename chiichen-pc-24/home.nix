@@ -30,16 +30,23 @@
   # 这些软件将仅在当前用户下可用，不会影响系统级别的配置
   # 建议将所有 GUI 软件，以及与 OS 关系不大的 CLI 软件，都通过 home.packages 安装
   home.packages = with pkgs;[
-    kitty
+    # System level apps
     egl-wayland
+
+    # Development apps
     vscode
     google-chrome
-
     clash-verge-rev
     v2raya
     nixpkgs-fmt
     devenv
-    # 如下是我常用的一些命令行工具，你可以根据自己的需要进行增删
+
+    # Development environment
+    nodePackages.pnpm
+    nodePackages.npm
+
+
+    # Command line apps
     neofetch
     nnn # terminal file manager
 
@@ -52,7 +59,6 @@
     # utils
     ripgrep # recursively searches directories for a regex pattern
     jq # A lightweight and flexible command-line JSON processor
-    yq-go # yaml processor https://github.com/mikefarah/yq
     eza # A modern replacement for ‘ls’
     fzf # A command-line fuzzy finder
 
@@ -84,7 +90,6 @@
     nix-output-monitor
 
     # productivity
-    hugo # static site generator
     glow # markdown previewer in terminal
 
     btop # replacement of htop/nmon
@@ -118,7 +123,7 @@
     enableCompletion = true;
     # TODO 在这里添加你的自定义 bashrc 内容
     bashrcExtra = ''
-      export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/go/bin"
+
     '';
 
     # TODO 设置一些别名方便使用，你可以根据自己的需要进行增删
