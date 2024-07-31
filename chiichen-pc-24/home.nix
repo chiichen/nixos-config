@@ -37,7 +37,6 @@
     vscode
     google-chrome
     clash-verge-rev
-    v2raya
     nixpkgs-fmt
     devenv
 
