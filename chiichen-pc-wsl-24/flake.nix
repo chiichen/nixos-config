@@ -27,7 +27,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.chiichen = import ./home.nix;
+            home-manager.users.nixos = import ./home.nix;
             home-manager.backupFileExtension = "backup";
             home-manager.extraSpecialArgs = inputs;
           }
