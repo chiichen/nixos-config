@@ -7,6 +7,7 @@
 
   home.packages = with pkgs;[
     nixpkgs-fmt
+    nil
     devenv
 
     # Development environment
