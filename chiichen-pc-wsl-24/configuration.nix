@@ -10,11 +10,15 @@
 {
   wsl.enable = true;
   wsl.defaultUser = "nixos";
-  
+
   programs.nix-ld = {
     enable = true;
     package = pkgs.nix-ld-rs;
   };
+
+  # Allow unfree packages
+  nixpkgs.config.allowUnfree = true;
+
   # Setting mirror in China
   nix.settings.substituters = [ "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store" ];
   nix.settings.trusted-users = [ "chiichen" "nixos"];
