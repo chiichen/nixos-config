@@ -106,6 +106,9 @@
     ethtool
     pciutils # lspci
     usbutils # lsusb
+
+    #fonts
+    corefonts
   ];
 
   # git 相关配置
