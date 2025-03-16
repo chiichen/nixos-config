@@ -11,6 +11,8 @@
   wsl.enable = true;
   wsl.defaultUser = "nixos";
 
+  time.timeZone = "Asia/Shanghai";  # Set timezone
+
   programs.nix-ld = {
     enable = true;
     package = pkgs.nix-ld-rs;
