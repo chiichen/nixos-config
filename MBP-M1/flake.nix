@@ -43,6 +43,8 @@
       # Allow unfree packages
       nixpkgs.config.allowUnfree = true;
 
+      nix.settings.trusted-users = [ "chiichen" "chikejian" ];
+
       users.users.chikejian = {
         name = "chikejian";
         home = "/Users/chikejian";
