@@ -21,7 +21,7 @@
         system = "x86_64-linux";
         modules = [
           ./configuration.nix
-          ./app/vscode.nix
+          # ./app/vscode.nix
           nixos-wsl.nixosModules.wsl
           home-manager.nixosModules.home-manager
           {
@@ -32,7 +32,7 @@
             home-manager.extraSpecialArgs = inputs;
           }
           {
-          vscode-remote-workaround.enable = true;
+          # vscode-remote-workaround.enable = true;
           }
         ];
       };
