@@ -15,6 +15,10 @@
     nodePackages.npm
     git-lfs
 
+    ## Command Line shell
+    nushell
+    carapace
+
     #Dev Tools
     android-tools
     binutils

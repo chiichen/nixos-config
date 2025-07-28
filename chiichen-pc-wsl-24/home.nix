@@ -19,6 +19,10 @@
     neofetch
     nnn # terminal file manager
 
+    ## Command Line shell
+    nushell
+    carapace
+
     # archives
     zip
     xz
