@@ -83,6 +83,9 @@
 
     #fonts
     corefonts
+
+    #download tools
+    tdl
   ];
 
   # git 相关配置
